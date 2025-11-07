@@ -1,0 +1,8 @@
+{
+  "alert_invalid_domain": "Please enter a valid domain, e.g. example.com",
+  "alert_empty_input": "Please enter a domain first",
+  "alert_testing": "Testing…",
+  "alert_error": "Test failed, please try again later",
+  "summary_label": "Summary",
+  "maintenance_message": "The site is under maintenance, please visit later"
+}

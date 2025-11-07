@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}{{ text.meta_title or (text.title ~ " | Dovecot.io") }}{% endblock %}
+
+{% block content %}
+
+<section class="hero" id="tools" aria-labelledby="heroTitle">
+  <h2 id="heroTitle">{{ text.hero_title }}</h2>
+  <p>{{ text.hero_desc }}</p>
+
+  <form id="targetForm" class="input" onsubmit="return false">
+    <input
+      id="target"
+      name="target"
+      inputmode="url"
+      placeholder="{{ text.input_placeholder }}"
+      aria-label="{{ text.input_aria_label }}"
+      required
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+    >
+    <button class="btn primary" id="runAll" type="button">{{ text.button_run_all }}</button>
+    <button class="btn" id="clearAll" type="reset">{{ text.button_clear }}</button>
+  </form>
+
+  <!-- 工具网格 -->
+  <div class="grid" role="list">
+    {% include 'tools.html' %}
+  </div>
+</section>
+
+<section id="about" class="grid" style="margin-top:20px">
+  <article class="card span-8">
+    <h3>{{ text.about_title }}</h3>
+    <p class="desc">
+      {{ text.about_desc }}
+    </p>
+    <div class="kvs">
+      <div class="k">{{ text.kv_abilities_key }}</div>
+      <div>{{ text.kv_abilities_val }}</div>
+
+      <div class="k">{{ text.kv_audience_key }}</div>
+      <div>{{ text.kv_audience_val }}</div>
+
+      <div class="k">{{ text.kv_deploy_key }}</div>
+      <div>{{ text.kv_deploy_val | safe }}</div>
+
+      <div class="k">{{ text.kv_integrate_key }}</div>
+      <div>{{ text.kv_integrate_val }}</div>
+    </div>
+  </article>
+
+  <article id="legal" class="card span-4">
+    <h3>{{ text.legal_title }}</h3>
+    <p class="desc">
+      {{ text.legal_desc }}
+    </p>
+    {% if text.legal_note %}
+    <p class="desc"><strong>{{ text.legal_note }}</strong></p>
+    {% endif %}
+  </article>
+</section>
+
+{% endblock %}

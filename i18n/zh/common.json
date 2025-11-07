@@ -1,0 +1,8 @@
+{
+  "alert_invalid_domain": "请输入合法的域名，例如 example.com",
+  "alert_empty_input": "请先输入域名",
+  "alert_testing": "检测中…",
+  "alert_error": "检测失败，请稍后重试",
+  "summary_label": "总体结果",
+  "maintenance_message": "网站维护中，请稍后访问"
+}

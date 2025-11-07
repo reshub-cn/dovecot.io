@@ -1,0 +1,23 @@
+{
+  "alert_no_domain": "请先输入域名，例如 <b>example.com</b> 😊",
+  "alert_invalid_domain": "请输入合法域名（不含协议和路径）<br><small>例如：<b>gmail.com</b></small>",
+  "checking": "检测中…",
+  "error_prefix": "❌ 错误：",
+  "check_failed": "❌ 检测失败：",
+  "unknown_error": "未知错误",
+  "theme_light": "浅色模式",
+  "theme_dark": "深色模式",
+  "theme_label": "当前主题：{mode}（点击切换）",
+  "mx_line": "优先级 {pref} → {host}",
+  "spf_line": "机制 {count}，策略：{policy}",
+  "ports_reachable": "✅ 可达",
+  "ports_unreachable": "⚠️ 不可达",
+  "summary_mx": "MX：{count} 条；{status}",
+  "summary_spf": "SPF：{policy}",
+  "summary_dkim": "DKIM：{count} 个选择器公钥 ✅",
+  "summary_dmarc": "DMARC：{policy}",
+  "summary_ports": "端口可达：{text}",
+  "summary_tls": "TLS/STARTTLS：{text}",
+  "summary_dnsbl": "DNSBL：{text}",
+  "summary_ptr": "PTR：{text}"
+}

@@ -1,0 +1,476 @@
+/* ========== 默认使用系统主题，避免闪烁 ========== */
+:root {
+  color-scheme: light dark;  /* ✅ 让浏览器自动选对输入框/滚动条配色 */
+}
+
+/* ========== 默认样式（浅色为主） ========== */
+:root {
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --brand: #0369a1;
+  --ok: #16a34a;
+  --warn: #d97706;
+  --err: #dc2626;
+  --ring: 0 0 0 3px rgba(14,165,233,.35);
+}
+
+/* ========== 深色模式（跟随系统） ========== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1020;
+    --card: #0f172a;
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+    --brand: #0ea5e9;
+    --ok: #22c55e;
+    --warn: #f59e0b;
+    --err: #ef4444;
+    --ring: 0 0 0 3px rgba(14,165,233,.35);
+  }
+}
+
+/* ========== 手动强制模式：仅在用户切换时生效 ========== */
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+/* ========== 基础变量：默认暗色 ========== */
+:root {
+  --bg: #0b1020;
+  --card: #0f172a;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --brand: #0ea5e9;
+  --ok: #22c55e;
+  --warn: #f59e0b;
+  --err: #ef4444;
+  --ring: 0 0 0 3px rgba(14,165,233,.35);
+}
+
+/* ========== 系统偏好下的浅色 ========== */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #475569;
+    --brand: #0369a1;
+  }
+}
+
+/* ========== 手动覆盖模式：强制深色 / 浅色 ========== */
+:root[data-theme="dark"] {
+  --bg: #0b1020;
+  --card: #0f172a;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --brand: #0ea5e9;
+  --ok: #22c55e;
+  --warn: #f59e0b;
+  --err: #ef4444;
+  --ring: 0 0 0 3px rgba(14,165,233,.35);
+}
+
+:root[data-theme="light"] {
+  --bg: #e9f1fb;                   /* 更亮背景 */
+  --card: #ffffff;                 /* 纯白卡片 */
+  --text: #0f172a;                 /* 主字体 */
+  --muted: #64748b;                /* 次要文字稍淡 */
+  --brand: #0284c7;                /* 更高饱和蓝 */
+  --ok: #16a34a;
+  --warn: #d97706;
+  --err: #dc2626;
+  --ring: 0 0 0 3px rgba(14,165,233,.35);
+}
+
+:root[data-theme="light"] body {
+  background:
+    radial-gradient(1000px 400px at 60% -10%, rgba(14,165,233,.12), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.95)), var(--bg);
+  background-blend-mode: normal, normal, normal;
+}
+
+
+/* ========== 全局布局与组件 ========== */
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(14,165,233,.10), transparent 60%),
+    radial-gradient(1000px 500px at -10% 20%, rgba(99,102,241,.10), transparent 60%),
+    linear-gradient(180deg, rgba(2,6,23,.75), rgba(2,6,23,.75)), var(--bg);
+  background-blend-mode: screen, screen, normal, normal;
+  transition: background-color .25s ease, color .25s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--brand), #60a5fa);
+  box-shadow: 0 10px 25px rgba(14,165,233,.35);
+}
+
+.logo svg {
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.25));
+}
+
+.brand h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 1px solid rgba(148,163,184,.25);
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: .2s;
+  backdrop-filter: saturate(120%) blur(4px);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn.primary {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--brand), #60a5fa);
+  color: white;
+  box-shadow: 0 10px 25px rgba(14,165,233,.35);
+}
+
+.btn.ghost {
+  background: transparent;
+}
+
+.hero {
+  margin-top: 10px;
+  border-radius: 16px;
+  padding: 28px;
+  background:
+    radial-gradient(600px 280px at 100% 0%, rgba(14,165,233,.12), transparent 60%),
+    radial-gradient(600px 280px at 0% 100%, rgba(99,102,241,.12), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02)), var(--card);
+  border: 1px solid rgba(148,163,184,.15);
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin: 0 0 10px;
+}
+
+.hero p {
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+
+.input {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* 通用输入框样式（深浅模式都会继承） */
+.input input {
+  flex: 1 1 280px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(148,163,184,.25);
+  font-size: 14px;
+  transition: all .25s ease;
+  color: var(--text);
+}
+
+/* 深色主题 */
+:root[data-theme="dark"] .input input {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(148,163,184,.25);
+  color: #e5e7eb;
+}
+
+/* 浅色主题 */
+:root[data-theme="light"] .input input {
+  background: #ffffff;             /* ← 改成纯白 */
+  border-color: rgba(148,163,184,.3);
+  color: #0f172a;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05); /* 轻阴影增强立体感 */
+}
+
+/* placeholder 颜色调整 */
+:root[data-theme="light"] .input input::placeholder {
+  color: #94a3b8;
+}
+:root[data-theme="dark"] .input input::placeholder {
+  color: #64748b;
+}
+
+/* 聚焦时品牌色柔光 */
+.input input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(14,165,233,.35);
+  border-color: transparent;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.card {
+  grid-column: span 12;
+  border: 1px solid rgba(148,163,184,.15);
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02)), var(--card);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+@media (min-width: 900px) {
+  .card.span-4 { grid-column: span 4; }
+  .card.span-6 { grid-column: span 6; }
+  .card.span-8 { grid-column: span 8; }
+}
+
+.card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.desc {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+.kvs {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.kvs .k {
+  color: var(--muted);
+}
+
+/* ========== result 输出区 ========== */
+.result {
+  min-height: 200px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px dashed rgba(148,163,184,.25);
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  line-height: 1.45;
+  transition: background .25s ease, color .25s ease;
+}
+
+.result:empty::before {
+  content: "—";
+  opacity: 0.25;
+}
+
+/* 默认背景根据系统偏好 */
+@media (prefers-color-scheme: light) {
+  .result { background: rgba(0,0,0,0.02); }
+}
+@media (prefers-color-scheme: dark) {
+  .result { background: rgba(255,255,255,0.02); }
+}
+
+/* 手动主题下强制覆盖 */
+:root[data-theme="light"] .result {
+  background: rgba(0,0,0,0.02);
+}
+:root[data-theme="dark"] .result {
+  background: rgba(255,255,255,0.02);
+}
+
+/* ========== 其他组件 ========== */
+.badge {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(148,163,184,.25);
+  color: var(--muted);
+}
+
+.status.ok { color: var(--ok); }
+.status.warn { color: var(--warn); }
+.status.err { color: var(--err); }
+
+footer {
+  margin: 22px 0 10px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+a {
+  color: inherit;
+}
+/* 统一表单控件：根据主题声明 color-scheme，避免 UA 自动“变黑” */
+:root[data-theme="light"] input,
+:root[data-theme="light"] textarea,
+:root[data-theme="light"] select {
+  color-scheme: light;                 /* ← 关键：告诉浏览器这是浅色控件 */
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ffffff !important;/* ← 覆盖 UA 的 field 背景 */
+  color: #0f172a;
+  border: 1px solid rgba(148,163,184,.30);
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+:root[data-theme="dark"] input,
+:root[data-theme="dark"] textarea,
+:root[data-theme="dark"] select {
+  color-scheme: dark;                  /* ← 关键：深色控件 */
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: rgba(255,255,255,.05) !important;
+  color: #e5e7eb;
+  border: 1px solid rgba(148,163,184,.25);
+}
+
+/* placeholder 颜色 */
+:root[data-theme="light"] input::placeholder { color:#94a3b8; }
+:root[data-theme="dark"]  input::placeholder { color:#64748b; }
+
+/* 聚焦高亮（保持你原来的品牌风格） */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(14,165,233,.35);
+  border-color: transparent;
+}
+
+/* 处理 Chrome 自动填充的黄底/灰底问题（浅/深模式各一套） */
+:root[data-theme="light"] input:-webkit-autofill,
+:root[data-theme="light"] input:-webkit-autofill:hover,
+:root[data-theme="light"] input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #0f172a;
+  box-shadow: 0 0 0px 1000px #ffffff inset !important;
+}
+
+:root[data-theme="dark"] input:-webkit-autofill,
+:root[data-theme="dark"] input:-webkit-autofill:hover,
+:root[data-theme="dark"] input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #e5e7eb;
+  box-shadow: 0 0 0px 1000px rgba(255,255,255,.05) inset !important;
+}
+/* 给 DKIM 与 端口探测输入框加统一宽度 */
+.wide-input {
+  width: 100%;
+  max-width: 360px;          /* 可以按需改大或小，比如 400px */
+  box-sizing: border-box;
+}
+
+.input .wide-input {
+  flex: 1 1 auto;
+}
+
+/* 兼容浅色与深色主题 */
+:root[data-theme="light"] .wide-input {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid rgba(148,163,184,.3);
+}
+
+:root[data-theme="dark"] .wide-input {
+  background: rgba(255,255,255,.05);
+  color: #e5e7eb;
+  border: 1px solid rgba(148,163,184,.25);
+}
+
+.wide-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(14,165,233,.35);
+  border-color: transparent;
+}
+
+.alert-popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  background: #fff;
+  color: #333;
+  border-radius: 12px;
+  padding: 12px 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+.alert-popup.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+.alert-popup.warning {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+}
+.alert-popup.error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+.alert-popup.info {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}

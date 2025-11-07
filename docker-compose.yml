@@ -1,0 +1,15 @@
+services:
+  dovecot-io-www-service:
+    container_name: dovecot-io-www
+    restart: always
+    ports:
+      - "8020:80"
+    environment:
+      TZ: Asia/Shanghai
+      # 可按需补：FLASK_ENV=production / FLASK_DEBUG=0 等
+      # FLASK_ENV: production
+      # FLASK_DEBUG: "0"
+    volumes:
+      # 把宿主机当前目录的这些文件/目录，挂到容器内 /app 下
+      - ./.env:/app/.env:ro
+      - ./GeoLite2-Country.mmdb:/app/GeoLite2-Country.mmdb

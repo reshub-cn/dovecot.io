@@ -1,0 +1,35 @@
+# 忽略所有 .git 目录和文件
+.git/
+
+# 忽略 node_modules（适用于 Node.js 项目）
+node_modules/
+
+# 忽略本地调试/开发文件
+*.log
+*.swp
+.DS_Store
+
+# 忽略 IDE 配置文件
+.vscode/
+.idea/
+
+# 忽略构建产物（如已编译的二进制文件或 dist 目录）
+dist/
+build/
+*.exe
+*.out
+
+# 忽略 Docker 相关文件（避免递归）
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# 忽略特定文件或目录（按需添加）
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+
+README.md
+README.zh.md
+GeoLite2-Country.mmdb
+.env

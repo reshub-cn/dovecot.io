@@ -1,0 +1,35 @@
+
+<!doctype html>
+<html lang="{{ 'zh-CN' if lang=='zh' else 'en' }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %} {{ common_text.header_title }} {% endblock %}</title>
+  <link rel="stylesheet" href="/static/assets/style.css" />
+    <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/svg+xml">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png" sizes="32x32">
+    <link rel="alternate icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png" sizes="32x32">
+
+    {% if meta_desc %}<meta name="description" content="{{ meta_desc|e }}">{% endif %}
+
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+     <link rel="canonical" href="{{ hreflang[lang] }}" />
+     <link rel="alternate" hreflang="zh" href="{{ hreflang.zh }}" />
+     <link rel="alternate" hreflang="en" href="{{ hreflang.en }}" />
+     <link rel="alternate" hreflang="x-default" href="{{ hreflang.x_default }}" />
+
+
+</head>
+<body>
+<div class="wrap">
+  {% include 'partials/header.html' %}
+  <main>{% block content %}{% endblock %}</main>
+  {% include 'partials/footer.html' %}
+</div>
+</body>
+</html>

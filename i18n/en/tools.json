@@ -1,0 +1,46 @@
+{
+  "mx_title": "📮 MX Record Check",
+  "mx_badge": "DNS",
+  "mx_desc": "Resolve MX records, priority, relay/direct delivery, and A/AAAA match.",
+  "mx_button": "Check MX",
+
+  "spf_title": "🧾 SPF Check",
+  "spf_badge": "TXT",
+  "spf_desc": "Retrieve SPF from TXT record; analyze mechanism count, include depth, and policy strength.",
+  "spf_button": "Check SPF",
+
+  "dkim_title": "🔑 DKIM Selector Check",
+  "dkim_badge": "TXT",
+  "dkim_desc": "Query selector._domainkey for public keys; supports multiple selectors (comma-separated).",
+  "dkim_input_placeholder": "Default: default. Examples: default,mail,s1,s2",
+  "dkim_button": "Check DKIM",
+
+  "dmarc_title": "🛡️ DMARC Check",
+  "dmarc_badge": "TXT",
+  "dmarc_desc": "Fetch _dmarc record and parse policy (p/sp), alignment (a=), and report addresses (rua/ruf).",
+  "dmarc_button": "Check DMARC",
+
+  "ports_title": "🌐 Port Connectivity (SMTP/IMAP/POP3)",
+  "ports_badge": "Connectivity",
+  "ports_desc": "Test common ports: 25/465/587, 143/993, 110/995.",
+  "ports_input_placeholder": "Optional: specify host (defaults to MX target)",
+  "ports_button": "Test Connectivity",
+
+  "tls_title": "🔒 TLS / STARTTLS Evaluation",
+  "tls_badge": "Security",
+  "tls_desc": "Check handshake protocol version, certificate chain, weak ciphers, and STARTTLS support.",
+  "tls_button": "Evaluate TLS",
+
+  "dnsbl_title": "🚫 DNSBL Blacklist Check",
+  "dnsbl_badge": "Reputation",
+  "dnsbl_desc": "Test common DNSBLs for blacklist entries; supports IPv4 and IPv6.",
+  "dnsbl_button": "Check DNSBL",
+
+  "ptr_title": "🔁 PTR Reverse Lookup",
+  "ptr_badge": "DNS",
+  "ptr_desc": "Retrieve PTR for outbound IP and verify against HELO/EHLO.",
+  "ptr_button": "Query PTR",
+
+  "summary_title": "📊 Summary Report",
+  "summary_desc": "Aggregate results from all tools to generate a one-page overview (✅ OK, ⚠️ Optimize, ❌ Error)."
+}

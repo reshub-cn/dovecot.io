@@ -1,0 +1,46 @@
+{
+  "mx_title": "📮 MX 记录检测",
+  "mx_badge": "DNS",
+  "mx_desc": "解析 MX 记录、优先级、是否直连/中继、是否与 A/AAAA 匹配。",
+  "mx_button": "检测 MX",
+
+  "spf_title": "🧾 SPF 检查",
+  "spf_badge": "TXT",
+  "spf_desc": "拉取 TXT 记录中 SPF，解析机制数量、include 链深、硬软失败策略。",
+  "spf_button": "检测 SPF",
+
+  "dkim_title": "🔑 DKIM 选择器检测",
+  "dkim_badge": "TXT",
+  "dkim_desc": "按 selector._domainkey 查询公钥；支持批量（逗号分隔）。",
+  "dkim_input_placeholder": "默认：default。可填：default,mail,s1,s2",
+  "dkim_button": "检测 DKIM",
+
+  "dmarc_title": "🛡️ DMARC 检查",
+  "dmarc_badge": "TXT",
+  "dmarc_desc": "拉取 _dmarc 记录并解析策略（p/sp）、对齐(a=)、上报地址(rua/ruf)。",
+  "dmarc_button": "检测 DMARC",
+
+  "ports_title": "🌐 端口可达（SMTP/IMAP/POP3）",
+  "ports_badge": "Connectivity",
+  "ports_desc": "对常见端口发起探测：25/465/587、143/993、110/995；",
+  "ports_input_placeholder": "可选：指定主机（默认根据 MX）",
+  "ports_button": "测试可达",
+
+  "tls_title": "🔒 TLS / STARTTLS 评估",
+  "tls_badge": "Security",
+  "tls_desc": "握手协议版本、证书链、常见弱套件、STARTTLS 支持等。",
+  "tls_button": "评估 TLS",
+
+  "dnsbl_title": "🚫 DNSBL 黑名单检查",
+  "dnsbl_badge": "Reputation",
+  "dnsbl_desc": "对常见 DNSBL 列表做命中检查；支持 IPv4 / IPv6。",
+  "dnsbl_button": "检查 DNSBL",
+
+  "ptr_title": "🔁 反向解析 PTR",
+  "ptr_badge": "DNS",
+  "ptr_desc": "提取出站 IP 的 PTR，检查是否与 HELO/EHLO 一致。",
+  "ptr_button": "查询 PTR",
+
+  "summary_title": "📊 汇总报告",
+  "summary_desc": "收集各工具的关键结论，形成一页式概览（分级：✅ 正常、⚠️ 建议优化、❌ 错误）。"
+}

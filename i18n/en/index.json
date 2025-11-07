@@ -1,0 +1,25 @@
+{
+  "meta_title": "Dovecot.io | Universal Mail Diagnostic Platform",
+  "title": "Dovecot.io Mail Diagnostic Tool",
+  "hero_title": "One-stop Diagnostics for Common Mail Issues",
+  "hero_desc": "Enter a domain or hostname to quickly check MX, SPF, DKIM, DMARC, Port Connectivity, TLS/STARTTLS, DNSBL, PTR and more.",
+  "input_placeholder": "e.g. example.com",
+  "input_aria_label": "Enter a domain to test",
+  "button_run_all": "Run Full Test",
+  "button_clear": "Clear",
+
+  "about_title": "About This Platform",
+  "about_desc": "Dovecot.io is an independent mail connectivity and deliverability diagnostics toolkit designed to help engineers quickly locate DNS configuration, TLS, port reachability, and reputation issues. It is not a mail hosting service, nor does it provide commercial mailboxes. With its open JSON APIs, it can be integrated as an internal health-check or self-hosted monitoring panel.",
+  "kv_abilities_key": "Main Capabilities",
+  "kv_abilities_val": "MX / SPF / DKIM / DMARC, Port Connectivity, TLS/STARTTLS, DNSBL, PTR",
+  "kv_audience_key": "Target Audience",
+  "kv_audience_val": "Mail Administrators, DevOps Engineers, Deliverability Experts, SREs",
+  "kv_deploy_key": "Deployment Model",
+  "kv_deploy_val": "Frontend-Backend separation with static UI; backend provides <code>/api/*</code> JSON interfaces",
+  "kv_integrate_key": "Integration Scenarios",
+  "kv_integrate_val": "CI/CD health checks, scheduled inspections, alert integration",
+
+  "legal_title": "Compliance & Disclaimer",
+  "legal_desc": "This site is not affiliated, associated, or endorsed by the Dovecot mail server project. \"Dovecot.io\" is an independent website providing general-purpose mail diagnostic tools and reports.",
+  "legal_note": "This site is not affiliated with the Dovecot mail server project."
+}

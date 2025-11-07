@@ -1,0 +1,25 @@
+{
+  "meta_title": "Dovecot.io | 通用邮件检测 / 诊断平台",
+  "title": "Dovecot.io 邮件检测工具",
+  "hero_title": "一站式诊断常见邮件问题",
+  "hero_desc": "输入域名或主机名，即可对 MX、SPF、DKIM、DMARC、端口可达、TLS/STARTTLS、DNSBL、PTR 等进行快速体检。",
+  "input_placeholder": "例如：example.com",
+  "input_aria_label": "请输入要检测的域名",
+  "button_run_all": "一键体检",
+  "button_clear": "清空",
+
+  "about_title": "关于本平台",
+  "about_desc": "Dovecot.io 是一个独立的邮件连通性与可达性诊断工具集合，帮助工程师快速定位 DNS 配置、TLS、端口可达与信誉问题。它并非邮件托管服务，也不提供商业邮箱。后端接口对接后可作为企业内网 / 自托管巡检面板使用。",
+  "kv_abilities_key": "主要能力",
+  "kv_abilities_val": "MX / SPF / DKIM / DMARC、端口可达、TLS/STARTTLS、DNSBL、PTR",
+  "kv_audience_key": "适用对象",
+  "kv_audience_val": "邮件管理员、运维工程师、反垃圾/投递工程师、SRE",
+  "kv_deploy_key": "部署形态",
+  "kv_deploy_val": "前后端分离，前端静态化；后端提供 <code>/api/*</code> JSON 接口",
+  "kv_integrate_key": "集成方式",
+  "kv_integrate_val": "CI/CD 健康检查、定时巡检、告警联动",
+
+  "legal_title": "合规与声明",
+  "legal_desc": "本网站与 Dovecot 邮件服务器项目无任何关联或背书关系。“Dovecot.io” 作为独立站点，仅提供通用检测工具与报告。",
+  "legal_note": "This site is not affiliated with the Dovecot mail server project."
+}

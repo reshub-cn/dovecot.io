@@ -1,0 +1,88 @@
+<!-- MX -->
+<article class="card span-6" role="listitem">
+  <h3>{{ t.mx_title }} <span class="badge">{{ t.mx_badge }}</span></h3>
+  <p class="desc">{{ t.mx_desc }}</p>
+  <div class="row">
+    <button class="btn" data-tool="mx">{{ t.mx_button }}</button>
+  </div>
+  <pre class="result" id="out-mx" aria-live="polite"></pre>
+</article>
+
+<!-- SPF -->
+<article class="card span-6" role="listitem">
+  <h3>{{ t.spf_title }} <span class="badge">{{ t.spf_badge }}</span></h3>
+  <p class="desc">{{ t.spf_desc }}</p>
+  <div class="row">
+    <button class="btn" data-tool="spf">{{ t.spf_button }}</button>
+  </div>
+  <pre class="result" id="out-spf" aria-live="polite"></pre>
+</article>
+
+<!-- DKIM -->
+<article class="card span-6" role="listitem">
+  <h3>{{ t.dkim_title }} <span class="badge">{{ t.dkim_badge }}</span></h3>
+  <p class="desc">{{ t.dkim_desc | safe }}</p>
+  <div class="row" style="width:100%">
+    <input id="dkimSelectors" class="wide-input" placeholder="{{ t.dkim_input_placeholder }}">
+    <button class="btn" data-tool="dkim">{{ t.dkim_button }}</button>
+  </div>
+  <pre class="result" id="out-dkim" aria-live="polite"></pre>
+</article>
+
+<!-- DMARC -->
+<article class="card span-6" role="listitem">
+  <h3>{{ t.dmarc_title }} <span class="badge">{{ t.dmarc_badge }}</span></h3>
+  <p class="desc">{{ t.dmarc_desc | safe }}</p>
+  <div class="row">
+    <button class="btn" data-tool="dmarc">{{ t.dmarc_button }}</button>
+  </div>
+  <pre class="result" id="out-dmarc" aria-live="polite"></pre>
+</article>
+
+<!-- Ports -->
+<article class="card span-6" role="listitem">
+  <h3>{{ t.ports_title }} <span class="badge">{{ t.ports_badge }}</span></h3>
+  <p class="desc">{{ t.ports_desc }}</p>
+  <div class="row" style="width:100%">
+    <input id="hostOverride" class="wide-input" placeholder="{{ t.ports_input_placeholder }}">
+    <button class="btn" data-tool="ports">{{ t.ports_button }}</button>
+  </div>
+  <pre class="result" id="out-ports" aria-live="polite"></pre>
+</article>
+
+<!-- TLS -->
+<article class="card span-6" role="listitem">
+  <h3>{{ t.tls_title }} <span class="badge">{{ t.tls_badge }}</span></h3>
+  <p class="desc">{{ t.tls_desc }}</p>
+  <div class="row">
+    <button class="btn" data-tool="tls">{{ t.tls_button }}</button>
+  </div>
+  <pre class="result" id="out-tls" aria-live="polite"></pre>
+</article>
+
+<!-- DNSBL -->
+<article class="card span-6" role="listitem">
+  <h3>{{ t.dnsbl_title }} <span class="badge">{{ t.dnsbl_badge }}</span></h3>
+  <p class="desc">{{ t.dnsbl_desc }}</p>
+  <div class="row">
+    <button class="btn" data-tool="dnsbl">{{ t.dnsbl_button }}</button>
+  </div>
+  <pre class="result" id="out-dnsbl" aria-live="polite"></pre>
+</article>
+
+<!-- PTR -->
+<article class="card span-6" role="listitem">
+  <h3>{{ t.ptr_title }} <span class="badge">{{ t.ptr_badge }}</span></h3>
+  <p class="desc">{{ t.ptr_desc }}</p>
+  <div class="row">
+    <button class="btn" data-tool="ptr">{{ t.ptr_button }}</button>
+  </div>
+  <pre class="result" id="out-ptr" aria-live="polite"></pre>
+</article>
+
+<!-- Summary -->
+<article class="card span-12">
+  <h3>{{ t.summary_title }}</h3>
+  <p class="desc">{{ t.summary_desc }}</p>
+  <pre class="result" id="out-summary" aria-live="polite"></pre>
+</article>

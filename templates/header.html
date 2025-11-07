@@ -1,0 +1,22 @@
+<header>
+  <a class="brand" href="/" aria-label="Home">
+    <span class="logo" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M4 12a8 8 0 0 1 16 0" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"></path>
+        <path d="M7 12a5 5 0 0 1 10 0" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"></path>
+        <circle cx="12" cy="12" r="2" fill="white"></circle>
+      </svg>
+    </span>
+    <div>
+      <h1>{{ h.brand_name }}</h1>
+      <div class="muted">{{ h.brand_slogan or "Email Connectivity & Deliverability Tools" }}</div>
+    </div>
+  </a>
+
+  <div class="row">
+    <button id="themeToggle" class="btn ghost" aria-label="{{ h.theme_toggle }}">🌓</button>
+    <a class="btn ghost" href="#about">{{ h.about }}</a>
+    <a class="btn ghost" href="#legal">{{ h.compliance }}</a>
+    <a class="btn primary" href="#tools">{{ h.start_test }}</a>
+  </div>
+</header>

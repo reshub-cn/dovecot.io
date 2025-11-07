@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="{{ 'zh-CN' if lang=='zh' else 'en' }}">
+<head>
+    <meta charset="utf-8">
+    <title>{{ message }}</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/svg+xml">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png" sizes="32x32">
+    <link rel="alternate icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png" sizes="32x32">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        .box {
+            padding: 2em;
+            border-radius: 10px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .links {
+            margin-top: auto;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+        .sep {
+            color: #666;
+        }
+        .friend {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .friend:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>{{ message }}</h1>
+    </div>
+    <div class="links">
+        {% if contact_email %}
+        <a class="friend" href="mailto:{{ contact_email }}">
+          {{ common_text.footer_contact_info }} {{ contact_email.replace('@', ' [at] ') }}
+        </a>
+        {% endif %}
+    </div>
+</body>
+</html>

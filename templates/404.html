@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ t.meta_title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #f9f9f9;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+      max-width: 600px;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 72px;
+      margin: 0;
+      color: #d9534f;
+    }
+    h2 {
+      margin: 10px 0;
+    }
+    p {
+      font-size: 18px;
+      margin: 10px 0 20px;
+      color: #666;
+    }
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #007bff;
+      color: #fff;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    a:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>404</h1>
+    <h2>{{ t.title }}</h2>
+    <p>{{ t.message }}</p>
+    <a href="/">{{ t.back_home }}</a>
+  </div>
+</body>
+</html>

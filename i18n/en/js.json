@@ -1,0 +1,23 @@
+{
+  "alert_no_domain": "Please enter a domain, e.g. <b>example.com</b> 😊",
+  "alert_invalid_domain": "Please enter a valid domain (without protocol or path)<br><small>e.g. <b>gmail.com</b></small>",
+  "checking": "Checking…",
+  "error_prefix": "❌ Error: ",
+  "check_failed": "❌ Test failed: ",
+  "unknown_error": "Unknown error",
+  "theme_light": "Light Mode",
+  "theme_dark": "Dark Mode",
+  "theme_label": "Current theme: {mode} (click to switch)",
+  "mx_line": "Priority {pref} → {host}",
+  "spf_line": "Mechanism {count}, Policy: {policy}",
+  "ports_reachable": "✅ Reachable",
+  "ports_unreachable": "⚠️ Unreachable",
+  "summary_mx": "MX: {count} records; {status}",
+  "summary_spf": "SPF: {policy}",
+  "summary_dkim": "DKIM: {count} selector(s) ✅",
+  "summary_dmarc": "DMARC: {policy}",
+  "summary_ports": "Ports: {text}",
+  "summary_tls": "TLS/STARTTLS: {text}",
+  "summary_dnsbl": "DNSBL: {text}",
+  "summary_ptr": "PTR: {text}"
+}
