@@ -2,9 +2,6 @@
 // main.js — Dovecot.io 工具逻辑（多语言 i18n 版）
 // =============================
 
-// ---------- 初始化 ----------
-document.getElementById("y").textContent = new Date().getFullYear();
-
 // ---------- 工具函数 ----------
 function getTarget() {
   const v = document.getElementById("target").value.trim();
