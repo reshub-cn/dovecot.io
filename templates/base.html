@@ -7,6 +7,20 @@
   <meta name="description" content="{{ b.meta_description }}">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="{{ b.meta_theme_color }}">
+
+    <!-- 关键：在CSS之前执行 -->
+  <script>
+  (function() {
+    try {
+      const pref = localStorage.getItem("theme-preference");
+      const theme = pref || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch(e) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  })();
+  </script>
+
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
