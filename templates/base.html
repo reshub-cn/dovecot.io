@@ -10,12 +10,14 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <div class="container">
     {% include 'header.html' %}
-    {% block content %}{% endblock %}
-    {% include 'footer.html' %}
-  </div>
 
+  <!-- 页面主要内容 -->
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  {% include 'footer.html' %}
   <script>
   window.lang = "{{ lang }}";
   window.i18n = {{ load_i18n(lang, 'js') | tojson }};

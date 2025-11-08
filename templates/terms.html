@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}{{ l.terms_title }}{% endblock %}
+{% block content %}
+<section class="hero">
+  <h2>{{ l.terms_title }}</h2>
+  <p><strong>{{ l.last_updated }}</strong> {{ now.strftime("%Y-%m-%d") }}</p>
+
+  <h3>{{ l.section_use_title }}</h3>
+  <p>{{ l.section_use_text }}</p>
+
+  <h3>{{ l.section_affiliation_title }}</h3>
+  <p>{{ l.section_affiliation_text }}</p>
+
+  <h3>{{ l.section_disclaimer_title }}</h3>
+  <p>{{ l.section_disclaimer_text }}</p>
+
+  <h3>{{ l.section_modifications_title }}</h3>
+  <p>{{ l.section_modifications_text }}</p>
+</section>
+{% endblock %}

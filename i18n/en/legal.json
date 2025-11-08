@@ -1,0 +1,17 @@
+{
+  "privacy_title": "Privacy Policy",
+  "terms_title": "Terms of Service",
+  "last_updated": "Last updated:",
+  "privacy_intro": "Dovecot.io is an independent, non-commercial diagnostic platform. We do not collect personal data, cookies, or tracking identifiers.",
+  "privacy_logs": "Minimal technical logs (such as domains tested and timestamps) may be temporarily stored for debugging purposes. No IP addresses or user agents are tracked.",
+  "privacy_processing": "All checks are processed in real-time and are not saved or shared with third parties.",
+  "privacy_agree": "By using this site, you agree to this Privacy Policy.",
+  "section_use_title": "1. General Use",
+  "section_use_text": "Dovecot.io provides diagnostic tools for email systems and is offered 'as is' for educational purposes only.",
+  "section_affiliation_title": "2. Non-Affiliation",
+  "section_affiliation_text": "Dovecot.io is an independent project and is not affiliated with or endorsed by the Dovecot mail server or its maintainers.",
+  "section_disclaimer_title": "3. Disclaimer",
+  "section_disclaimer_text": "The information provided by Dovecot.io is for reference only. The authors make no warranties and accept no liability for any damages resulting from use of this service.",
+  "section_modifications_title": "4. Modifications",
+  "section_modifications_text": "Dovecot.io reserves the right to modify these terms at any time without notice."
+}

@@ -190,15 +190,31 @@ def index():
     """Home: render with auto-detected language packs."""
     lang = current_lang()
     b = load_i18n(lang, "base")
-    t = load_i18n(lang, "tools")
     h = load_i18n(lang, "header")
     text = load_i18n(lang, "index")
+    t = load_i18n(lang, "tools")
     common = load_i18n(lang, "common")
     return render_template(
         "index.html",
-        text=text, b=b, t=t, h=h, common=common,
+        text=text, t=t, h=h, b=b, common=common,
         **common_context(lang)
     )
+
+@app.route("/terms")
+def terms():
+    lang = current_lang()
+    b = load_i18n(lang, "base")
+    h = load_i18n(lang, "header")
+    l = load_i18n(lang, "legal")
+    return render_template("terms.html", b=b, h=h, l=l, **common_context(lang))
+
+@app.route("/privacy")
+def privacy():
+    lang = current_lang()
+    b = load_i18n(lang, "base")
+    h = load_i18n(lang, "header")
+    l = load_i18n(lang, "legal")
+    return render_template("privacy.html", b=b, h=h, l=l, **common_context(lang))
 
 @app.get("/robots.txt")
 def robots():

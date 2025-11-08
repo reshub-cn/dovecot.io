@@ -100,10 +100,13 @@
 /* ========== 全局布局与组件 ========== */
 html, body {
   height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
+/* header 和 footer 固定顺序 */
 body {
-  margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   color: var(--text);
   background:
@@ -114,18 +117,28 @@ body {
   transition: background-color .25s ease, color .25s ease;
 }
 
+
+/* 主体内容区 */
 .container {
+  flex: 1 0 auto;
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 24px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 24px;
 }
 
 .brand {
@@ -351,10 +364,15 @@ header {
 .status.warn { color: var(--warn); }
 .status.err { color: var(--err); }
 
+/* 页脚始终在底部 */
 footer {
-  margin: 22px 0 10px;
+  flex-shrink: 0;
+  text-align: center;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(148,163,184,.15);
+  background: transparent;
 }
 
 a {

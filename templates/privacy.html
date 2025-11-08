@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ l.privacy_title }}{% endblock %}
+{% block content %}
+<section class="hero">
+  <h2>{{ l.privacy_title }}</h2>
+  <p><strong>{{ l.last_updated }}</strong> {{ now.strftime("%Y-%m-%d") }}</p>
+
+  <p>{{ l.privacy_intro }}</p>
+  <p>{{ l.privacy_logs }}</p>
+  <p>{{ l.privacy_processing }}</p>
+  <p>{{ l.privacy_agree }}</p>
+</section>
+{% endblock %}

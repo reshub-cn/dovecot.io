@@ -1,0 +1,17 @@
+{
+  "privacy_title": "隐私政策",
+  "terms_title": "使用条款",
+  "last_updated": "最后更新：",
+  "privacy_intro": "Dovecot.io 是一个独立、非商业化的邮件诊断平台，我们不收集任何个人数据、Cookies 或追踪信息。",
+  "privacy_logs": "在使用网站或 API 过程中，仅可能临时记录最少量的技术信息（如检测的域名及时间戳），用于调试与性能监控。系统不会记录或追踪访问者 IP 地址或浏览器信息。",
+  "privacy_processing": "所有检测请求均实时处理，不会被保存、分析或共享给任何第三方。",
+  "privacy_agree": "使用本网站即表示您已阅读并同意本隐私政策。",
+  "section_use_title": "1. 使用说明",
+  "section_use_text": "Dovecot.io 提供与邮件系统相关的检测与诊断工具，仅供学习研究使用，按“原样”提供，不保证结果的准确性或完整性。",
+  "section_affiliation_title": "2. 非官方声明",
+  "section_affiliation_text": "Dovecot.io 是一个独立项目，与 Dovecot 邮件服务器项目及其维护者无任何隶属、赞助或背书关系。",
+  "section_disclaimer_title": "3. 免责声明",
+  "section_disclaimer_text": "本网站提供的信息仅供参考，作者与维护者不对因使用本服务而造成的直接或间接损失承担任何责任。",
+  "section_modifications_title": "4. 条款修改",
+  "section_modifications_text": "Dovecot.io 保留随时修改本使用条款的权利，恕不另行通知。"
+}
